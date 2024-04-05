@@ -72,7 +72,7 @@ input, select, textarea {
 	appearance: none;
 }
 
-#backToTopBtn {
+#back-to-top-btn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -82,10 +82,9 @@ input, select, textarea {
     border-radius: 5px;
     cursor: pointer;
     background: #797168;
-
 }
 
-#backToTopBtn:hover {
+#back-to-top-btn:hover {
     background: #58514d;
 }
 
@@ -2798,7 +2797,7 @@ input, select, textarea {
 
 /* Small */
 
-	@media screen and (max-width: 736px) {
+	@media only screen and (max-width: 768px) {
 
 		/* Basic */
 
@@ -3008,6 +3007,10 @@ input, select, textarea {
 					border-top: 0;
 					padding-top: 0;
 				}
+
+				#back-to-top-btn {
+                    display: none !important;
+                }
 
 		/* Copyright */
 
