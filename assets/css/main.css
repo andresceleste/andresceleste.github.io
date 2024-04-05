@@ -1837,8 +1837,12 @@ input, select, textarea {
 				margin-right: 0;
 			}
 
-		ul.actions.special {
+		ul.actions.center {
 			text-align: center;
+		}
+
+		ul.actions.right {
+			text-align: right;
 		}
 
 /* Feature List */
@@ -2332,6 +2336,7 @@ input, select, textarea {
 			border-top-color: rgba(255, 255, 255, 0.05);
 		}
 
+
 		#footer form input[type="text"],
 		#footer form input[type="email"],
 		#footer form input[type="password"],
@@ -2340,6 +2345,9 @@ input, select, textarea {
 			background: #ccc;
 			box-shadow: none;
 		}
+        .input-wrapper {
+            padding: 0.5em 0; /* Adjust the padding value as needed */
+        }
 
 			#footer form input[type="text"]:focus,
 			#footer form input[type="email"]:focus,
