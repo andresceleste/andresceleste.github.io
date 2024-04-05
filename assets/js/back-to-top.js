@@ -7,8 +7,8 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320) {
-        document.getElementById("backToTopBtn").style.display = "block";
+        document.getElementById("back-to-top-btn").style.display = "block";
     } else {
-        document.getElementById("backToTopBtn").style.display = "none";
+        document.getElementById("back-to-top-btn").style.display = "none";
     }
 }
