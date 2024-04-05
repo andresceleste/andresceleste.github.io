@@ -2841,7 +2841,7 @@ input, select, textarea {
 					font-size: 1em;
 					letter-spacing: 0;
 					display: block;
-					margin: 0;
+					margin: 10px;
 				}
 
 		/* Button */
