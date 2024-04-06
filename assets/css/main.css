@@ -84,6 +84,62 @@ input, select, textarea {
     background: #797168;
 }
 
+#tech-stack{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    h2 {
+        padding: 0 10px;
+    }
+}
+.icon-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Use flexbox */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.icon-list li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 15px; /* Adjust padding as needed */
+    border-radius: 10px; /* Make the border circular */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1); /* Add glow effect */
+    background-color: #b1b4b9; /* Set background color for the circle */
+}
+
+.icon-list li:last-child {
+    margin-right: 0; /* Remove margin for last icon */
+    color: #555; /* Adjust label color as needed */
+}
+
+.icon-list li i {
+    font-size: 2rem; /* Adjust icon size as needed */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #tech-stack {
+        margin-top: 40px;
+        h2{
+            margin: 0;
+        }
+    }
+    .icon-list li {
+        margin: 5px; /* Decrease margin for smaller screens */
+        padding: 10px; /* Decrease padding for smaller screens */
+    }
+
+    .icon-list li i {
+        font-size: 1.5rem; /* Decrease icon size for smaller screens */
+    }
+}
+
 #back-to-top-btn:hover {
     background: #58514d;
 }
@@ -1904,7 +1960,7 @@ input, select, textarea {
 
 	.icon {
 		text-decoration: none;
-		text-decoration: none;
+		font-size: 2rem;
 	}
 
 		.icon:before {
@@ -1937,6 +1993,17 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+    @media screen and (min-width: 981px) {
+        .icon {
+            display: block;
+            text-align: center;
+        }
+
+        .icon a {
+            display: inline-block;
+            margin: 0 5px; /* Adjust as needed */
+        }
+    }
 /* Box */
 
 	.box header {
