@@ -136,7 +136,7 @@ input, select, textarea {
     }
 
     .icon-list li i {
-        font-size: 1.5rem; /* Decrease icon size for smaller screens */
+        font-size: 1rem; /* Decrease icon size for smaller screens */
     }
 }
 
