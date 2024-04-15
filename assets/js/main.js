@@ -64,3 +64,72 @@
 				});
 
 })(jQuery);
+
+// Function to fetch and inject header and footer content
+function fetchAndInjectContent(url, targetElementId) {
+    fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById(targetElementId).innerHTML = html;
+        });
+}
+
+// Fetch and inject footer content
+fetchAndInjectContent("../includes/footer.html", "footer");
+
+// Function to scroll to the top of the page
+function scrollToTop() {
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    document.body.scrollTop = 0; // For Safari
+}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320) {
+        document.getElementById("back-to-top-btn").style.display = "block";
+    } else {
+        document.getElementById("back-to-top-btn").style.display = "none";
+    }
+}
+
+// Function to show success message after submitting contact form
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch footer content from external HTML file
+    fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            // Inject the footer content into the DOM
+            document.getElementById('footer').innerHTML = html;
+
+            // Now the contact form element is available in the DOM
+            var contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    var form = this;
+                    var formData = new FormData(form);
+
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(function(response) {
+                        document.getElementById('success-message').style.display = 'block';
+                        form.reset();
+                    })
+                    .catch(function(error) {
+                        console.error('Error submitting form:', error);
+                    });
+                });
+            } else {
+                console.error('Contact form element not found.');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching footer content:', error);
+        });
+});
+
+

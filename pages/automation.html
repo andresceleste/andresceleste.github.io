@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Andres Celeste Portfolio - Automation Projects</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="../assets/css/main.css"/>
+</head>
+<body class="left-sidebar is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <section id="header" class="wrapper">
+
+        <!-- Logo -->
+        <div id="logo">
+            <h1><a href="../index.html">Automation</a></h1>
+            <p>Python, Robot Framework, and Selenium Projects</p>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li class="current"><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="../index.html#projects">Projects</a>
+                    <ul>
+                        <li><a href="index.html#web-scraping">Web Scraping with Python</a></li>
+                        <li><a href="index.html#bmi-calculator">BMI Calulator App</a></li>
+                        <li><a href="#">Automation</a></li>
+                        <li><a href="index.html#data-cleaning">Data Cleaning in SQL</a></li>
+                        <li><a href="index.html#data-exploration">Covid 19 Data Exploration</a></li>
+                        <li><a href="index.html#tableau-dashboards">Tableau Dashboards</a></li>
+                    </ul>
+                </li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+
+    </section>
+
+    <!-- Main -->
+    <section id="main" class="wrapper style2">
+        <div class="title">Projects</div>
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-3 col-12-medium">
+
+                    <!-- Sidebar -->
+                    <div id="sidebar" class="visible-desktop">
+                        <div class="box">
+                            <header>
+                                <h2>Robot Framework</h2>
+                            </header>
+                            <ul class="style3">
+                                <li><a href="#overview">Overview</a></li>
+                                <li><a href="#tests">Test Cases</a></li>
+                                <li><a href="#reports">Generated Reports</a></li>
+                            </ul>
+                            <header>
+                                <h2>Python Apps</h2>
+                            </header>
+                            <ul class="style3">
+                                <li><a href="#file_sorter">Automatic File Sorter</a></li>
+                                <li><a href="#file_backup">File Backup</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-9 col-12-medium imp-medium">
+
+                    <!-- Content -->
+                    <div id="content">
+                        <article class="box post">
+                            <header class="style1 align-left">
+                                <img src="../assets/images/automation_banner.jpg"
+                                     class="image mb-2"
+                                     alt="Automation Banner"/>
+                                <h2>Web Testing with Robot Framework + Selenium</h2>
+                                <p>This project demonstrates how to perform web testing using Robot Framework in
+                                    combination with SeleniumLibrary for browser automation.</p>
+                            </header>
+                            <h2 id="overview">Overview</h2>
+                            <p>
+                                <a href="https://robotframework.org">Robot Framework</a>
+                                <span>
+                                    is a generic open-source automation framework for acceptance testing,
+                                    acceptance test-driven development (ATDD), and robotic process automation (RPA). It
+                                    uses keyword-driven testing approach and can be extended with libraries implemented using Python or Java.
+                                </span>
+                            </p>
+                            <div class="mb-2">
+                                <h2 id="tests">Test Cases</h2>
+                                <p class="mb-1">
+                                    Test case files are located in the "tests" directory. The Sauce Labs demo website
+                                    was used to demonstrate web automation using SeleniumLibrary. Click on the sample
+                                    test cases below to see the latest versions online.
+                                </p>
+                                <div>
+                                    <a href="https://github.com/andresceleste/web_automation/blob/main/tests/valid_login.robot">Valid
+                                        Login Test Case</a>
+                                    <p class="mb-1">
+                                        A test suite with a single test for valid login. This test has a workflow using
+                                        keywords in the imported resource file.
+                                    </p>
+                                </div>
+                                <div>
+                                    <a href="https://github.com/andresceleste/web_automation/blob/main/tests/invalid_login.robot">Invalid
+                                        Login Test Cases</a>
+                                    <p>
+                                        A test suite containing tests related to invalid login. These tests are
+                                        data-driven by their nature. They use a single keyword, specified with the Test
+                                        Template setting, that is called with different arguments to cover different
+                                        scenarios. This suite also demonstrates using setups and teardowns in different
+                                        levels.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 id="reports">Generated Reports</h2>
+                                <p>
+                                    After running tests you will get report and log in HTML format. These files will
+                                    be located in the "results" folder. Example files are also visible below in case
+                                    you are not interested in running the tests yourself.
+                                </p>
+                                <div class="row gtr-150">
+                                    <div class="col-6 col-12-small">
+                                        <section class="box">
+                                            <header>
+                                                <h3>Tests Results</h3>
+                                            </header>
+                                            <a href="report.html" class="image featured">
+                                                <img src="../assets/images/tests_report.jpg" alt="Tests Results"
+                                                     title="Click here to view sample test report."/>
+                                            </a>
+                                            <p class="project-description">Test Results includes summary information,
+                                                test statistics, and test details.
+                                            </p>
+                                            <a href="report.html" class="button style1"
+                                               title="Click here to view sample test report.">View Sample
+                                            </a>
+                                        </section>
+                                    </div>
+                                    <div class="col-6 col-12-small">
+                                        <section class="box">
+                                            <header>
+                                                <h3>Tests Log</h3>
+                                            </header>
+                                            <a href="log.html" class="image featured">
+                                                <img src="../assets/images/tests_log.jpg" alt="Tests Log"
+                                                     title="Click here to view sample test log."/>
+                                            </a>
+                                            <p class="project-description">Test Log includes test statistics and the
+                                                test execution log, which is comes in handy for debugging failures.</p>
+                                            <a href="log.html" class="button style1"
+                                               title="Click here to view sample test log.">View Sample</a>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="box post">
+                            <header class="style1 align-left">
+                                <h2>Python Apps</h2>
+                                <p>Collection of Python apps that can be used to automate particular tasks.</p>
+                            </header>
+                            <div>
+                                <div class="row gtr-150">
+                                    <div class="col-6 col-12-small">
+                                        <section class="box">
+                                            <header>
+                                                <h3 id="file_sorter">Automatic File Sorter</h3>
+                                            </header>
+                                            <a href="https://github.com/andresceleste/portfolio_projects/blob/main/automatic_file_sorter.py"
+                                               class="image featured">
+                                                <img src="../assets/images/cluttered_desktop.jpg"
+                                                     alt="Automatic File Sorter" target="_blank"
+                                                     rel="nooperer"
+                                                     title="Click here to view source code on GitHub."/>
+                                            </a>
+                                            <p class="project-description">
+                                                This Python program automatically creates new folders based on the
+                                                extension of each file and arranges all the files within a given
+                                                directory.
+                                            </p>
+                                            <a href="https://github.com/andresceleste/portfolio_projects/blob/main/automatic_file_sorter.py"
+                                               class="button style1" target="_blank" rel="nooperer"
+                                               title="Click here to view source code on GitHub.">View Code</a>
+                                        </section>
+                                    </div>
+                                    <div class="col-6 col-12-small">
+                                        <section class="box">
+                                            <header>
+                                                <h3 id="file_backup">File Backup</h3>
+                                            </header>
+                                            <a href="https://github.com/andresceleste/portfolio_projects/blob/main/file_backup.py"
+                                               class="image featured">
+                                                <img src="../assets/images/file_backup.jpg"
+                                                     alt="File Backup" target="_blank"
+                                                     rel="nooperer"
+                                                     title="Click here to view source code on GitHub."/>
+                                            </a>
+                                            <p class="project-description">
+                                                You can use this Python application to back up a source folder daily and
+                                                save the backups in a destination directory.
+                                            </p>
+                                            <a href="https://github.com/andresceleste/portfolio_projects/blob/main/file_backup.py"
+                                               class="button style1" target="_blank" rel="nooperer"
+                                               title="Click here to view source code on GitHub.">View Code</a>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.dropotron.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

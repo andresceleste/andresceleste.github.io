@@ -85,13 +85,14 @@ input, select, textarea {
 }
 
 #tech-stack{
-    margin-top: 100px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    h2 {
+    h3 {
+        font-size: 1.5em;
         padding: 0 10px;
     }
 }
@@ -102,15 +103,32 @@ input, select, textarea {
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
+    .fa-python {
+        color: #306998;
+    }
+    .fa-robot {
+        color: #b52223;
+    }
+    .fa-database {
+        color: #00758F;
+    }
+    .fa-terminal {
+        color: #000000;
+    }
+    .fa-js-square {
+        color: #F7DF1E;
+    }
+    .fa-html5 {
+        color: #E34F26;
+    }
+    .fa-css3-alt {
+        color: #1572B6;
+    }
 }
 
 .icon-list li {
     display: inline-block;
-    margin: 0 10px;
-    padding: 15px; /* Adjust padding as needed */
-    border-radius: 10px; /* Make the border circular */
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1); /* Add glow effect */
-    background-color: #b1b4b9; /* Set background color for the circle */
+    padding: 10px; /* Adjust padding as needed */
 }
 
 .icon-list li:last-child {
@@ -119,26 +137,54 @@ input, select, textarea {
 }
 
 .icon-list li i {
-    font-size: 2rem; /* Adjust icon size as needed */
+    font-size: 3rem; /* Adjust icon size as needed */
+}
+
+.center-align {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     #tech-stack {
         margin-top: 40px;
-        h2{
+        h3 {
+            font-size: 1rem;
             margin: 0;
         }
     }
     .icon-list li {
-        margin: 5px; /* Decrease margin for smaller screens */
         padding: 10px; /* Decrease padding for smaller screens */
     }
 
     .icon-list li i {
-        font-size: 1rem; /* Decrease icon size for smaller screens */
+        font-size: 1.5rem; /* Decrease icon size for smaller screens */
+    }
+    .visible-desktop {
+		@media (max-width: 768px) {
+		    display: none !important;
+		}
     }
 }
+
+
+
 
 #back-to-top-btn:hover {
     background: #58514d;
@@ -193,8 +239,8 @@ input, select, textarea {
 		-webkit-transition: color .25s ease-in-out;
 		-ms-transition: color .25s ease-in-out;
 		transition: color .25s ease-in-out;
-		text-decoration: underline;
-		color: #717479;
+		text-decoration: none;
+		color: blue;
 	}
 
 		a:hover {
@@ -1659,12 +1705,23 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		display: inline-block;
+        max-width: 100%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        border: none;
+        /*@media (max-width: 768px) {
+            max-width: 80%;
+            margin: 0 20px !important;
+        }*/
 	}
 
 		.image img {
 			display: block;
 			width: 100%;
+			transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 		}
 
 		.image.fit {
@@ -1682,17 +1739,30 @@ input, select, textarea {
 			margin: 0 0 2em 0;
 		}
 
-			.image.centered img {
-				margin: 0 auto;
-				width: auto;
-			}
+        .image.centered img {
+            margin: 0 auto;
+            width: auto;
+        }
 
 		.image.featured {
-			display: flex;
 			width: 100%;
+            height: 230px;
 			margin: 0 0 2em 0;
-			height: 200px;
+
+            position: relative;
+            flex: 1;
+            border: 2px solid #ccc;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            cursor: pointer;
+            filter: grayscale(0);
+            text-align: center;
 		}
+
+        .image.featured:hover img {
+            transform: scale(1.1);
+        }
+
 
 /* Button */
 
@@ -2005,7 +2075,6 @@ input, select, textarea {
         }
     }
 /* Box */
-
 	.box header {
 		margin: 0 0 1.5em 0;
 	}
@@ -2043,7 +2112,7 @@ input, select, textarea {
 
 	.wrapper {
 		position: relative;
-		padding: 4em 0 9em 0;
+		padding: 6em 0 9em 0;
 	}
 
 		.wrapper .title {
@@ -2100,7 +2169,8 @@ input, select, textarea {
 				color: #fff;
 			}
 
-			.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6, .wrapper.style1 strong, .wrapper.style1 b, .wrapper.style1 a {
+			.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5,
+			.wrapper.style1 h6, .wrapper.style1 strong, .wrapper.style1 b, .wrapper.style1 a {
 				color: #fff;
 			}
 
@@ -2123,7 +2193,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style3 .image {
-				border: solid 10px #fff;
+				/*border: solid 10px #fff;*/
 			}
 
 /* Page Wrapper */
@@ -2149,7 +2219,7 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		background: url("../images/banner.jpg") center center;
 		background-size: cover;
 		padding: 0;
 	}
@@ -2356,11 +2426,11 @@ input, select, textarea {
 
 /* Features */
 
-	#features header.style1 {
+	#projects header.style1 {
 		padding-bottom: 5em;
 	}
 
-	#features ul.actions {
+	#projects ul.actions {
 		margin-top: 5em;
 	}
 
@@ -2368,21 +2438,23 @@ input, select, textarea {
 
 	#projects .project {
 		text-align: center;
-		height: 330px !important;
 	}
 
-		#projects .project h3 {
-			color: #797168;
-			height: 180px !important;
-			margin: 0 0 0.75em 0;
-			font-size: 1.15em;
-			letter-spacing: 0.05em;
-		}
-		.project-description {
-		    height: 60px;
-		}
+    #projects .project h3 {
+        text-align: center;
+        color: #797168 !important;
+        margin: 1em 0;
+        font-size: 1.15em;
+        letter-spacing: 0.05em;
+    }
 
-/* Main */
+    .project-description {
+        height: 80px;
+    }
+
+    .project-description-long {
+        height: 120px;
+    }
 
 /* Footer */
 
@@ -2401,7 +2473,6 @@ input, select, textarea {
 			border-top-color: #333;
 			border-top-color: rgba(255, 255, 255, 0.05);
 		}
-
 
 		#footer form input[type="text"],
 		#footer form input[type="email"],
@@ -3104,3 +3175,5 @@ input, select, textarea {
 						}
 
 	}
+
+
